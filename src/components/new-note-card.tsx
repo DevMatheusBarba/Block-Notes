@@ -39,6 +39,7 @@ export function NewNoteCard({ onNoteCreated }: newNoteCardPrps) {
             setShouldShowOnboarding(true)
             toast.success('Nota criada com sucesso')
         }
+        setContent("")
     }
 
     function handleStartRecording() {
@@ -79,7 +80,6 @@ export function NewNoteCard({ onNoteCreated }: newNoteCardPrps) {
 
     function stopRecording() {
         setIsRecording(false)
-
         if (speechRecognition != null) {
             speechRecognition.stop()
         }
